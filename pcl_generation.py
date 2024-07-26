@@ -2,8 +2,10 @@ import numpy as np
 import open3d as o3d
 
 # CAD_path = "data/curve_without_map_latest_gt.ply"
-CAD_path = 'ImageToStl.com_target_5_3.ply'
-save_path = "target_5_3_ray.ply"
+CAD_path = 'angle_validation_data/ImageToStl.com_target_5_3.ply'
+# CAD_path = 'angle_validation_data/scaled.STEP'
+
+save_path = "angle_validation_data/target_5_3_ray.ply"
 
 # cam_pos = [-300, 100, 500]
 # cam_pos = [200,500,200]
@@ -12,6 +14,7 @@ ray_ord = [0, 1, 0]
 
 mesh = o3d.io.read_triangle_mesh(CAD_path)
 mesh.compute_vertex_normals()
+o3d.visualization.draw_geometries([mesh])
 
 mesh_2 = o3d.geometry.TriangleMesh.create_sphere(radius=10).translate(cam_pos)
 mesh_t = o3d.t.geometry.TriangleMesh.from_legacy(mesh)

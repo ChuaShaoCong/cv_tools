@@ -11,7 +11,8 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
 # PARAMETERS
-CAD_path = "curved_validation_target2.ply"
+# CAD_path = "angle_validation_data/curved_validation_target2.ply"
+CAD_path = "angle_validation_data/target_5_3_ray.ply"
 top_view_axis = np.array([0, 1, 0])  # Assuming top view is along the Y-axis
 filter_percentile = 98 
 hardcoded_max_angle = 40
