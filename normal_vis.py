@@ -12,10 +12,10 @@ import matplotlib.cm as cm
 
 # PARAMETERS
 # CAD_path = "angle_validation_data/curved_validation_target2.ply"
-CAD_path = "angle_validation_data/target_5_3_ray.ply"
+CAD_path = "angle_validation_data/scaled_5_5.ply"
 top_view_axis = np.array([0, 1, 0])  # Assuming top view is along the Y-axis
 filter_percentile = 98 
-hardcoded_max_angle = 40
+hardcoded_max_angle = 35
 
 def normalize_vector(v):
     """Normalize a vector."""
@@ -155,8 +155,8 @@ if __name__ == "__main__":
     print(f"Max angle filtered: {max_angle_filtered}")
 
     # Visualise the normals with a heat map
-    colors_rgb = get_color_gradient(angle_degrees, max_angle_filtered)
-    # colors_rgb = get_color_gradient(angle_degrees, hardcoded_max_angle)
+    # colors_rgb = get_color_gradient(angle_degrees, max_angle_filtered)
+    colors_rgb = get_color_gradient(angle_degrees, hardcoded_max_angle)
     colors = np.array(colors_rgb, dtype=np.float32)
     vis_pcl = copy.deepcopy(mesh)
     vis_pcl.colors = o3d.utility.Vector3dVector(colors)

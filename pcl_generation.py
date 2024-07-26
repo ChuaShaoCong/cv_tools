@@ -2,10 +2,10 @@ import numpy as np
 import open3d as o3d
 
 # CAD_path = "data/curve_without_map_latest_gt.ply"
-CAD_path = 'angle_validation_data/ImageToStl.com_target_5_3.ply'
+CAD_path = 'angle_validation_data/scaled_5_5.ply'
 # CAD_path = 'angle_validation_data/scaled.STEP'
 
-save_path = "angle_validation_data/target_5_3_ray.ply"
+save_path = "angle_validation_data/scaled_5_5.ply"
 
 # cam_pos = [-300, 100, 500]
 # cam_pos = [200,500,200]
